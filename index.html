@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Yeon+Sung" rel="stylesheet">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			color: #000;
+			overflow-x: hidden;
+			transition: all 1s;
+		}
+
+	.container{ font-size: 45px; font-family: 'Yeon Sung', cursive; transition: all 1s;}	
+	#monitor{width:100px; height:40px; background: green; position: fixed; color: white; text-align: center; line-height: 40px;
+			right:0;}	
+	#jin{position: absolute; top:630px; left:1000px; width:300px; animation:rotate 1s linear forwards paused; }
+
+	@keyframes rotate{
+			from{transform: rotate(0deg)}
+			to{transform: rotateY(180deg)}
+		}
+
+	#jin2{position: absolute; top:150px; left:1250px; width:250px;}	
+	#jin3{position: absolute; top:500px; left:1150px; width:500px; transform: rotateY(180deg);}	
+	#jin4{position: absolute; top:0px; left:600px; width:300px;}		
+	#sun{position: absolute; top:980px; left:700px; width:300px; opacity: 0.5;}
+	#sun2{position: absolute; top:1750px; left:1150px; width:300px; animation-play-state: paused; opacity: 0;}
+	#sunny{position: absolute; top:1500px; left:650px; width:450px; opacity: 0.7;}
+	#fairy{position: absolute; top:1700px; left:1150px; width:400px; }
+
+		#vivi {width:100px; height: 80px; position: absolute; top: 1000px; left: 200px; opacity: 0;}
+		#vivi1 {width: 100px; height: 80px;position: absolute; top: 1000px; left:200px;
+				animation: bloom 2s ease 1 forwards; animation-delay: 0.1s; animation-play-state: paused; opacity: 0;}
+
+		@keyframes bloom{from{width:30px; height:20px; top:1050px; left:220px; transform: rotate3d(1,0.5,0,180deg);}
+					to{width:400px; height: 400px; top: 720px; left:100px; transform:perspective(650px) rotate3d(1,1,0,360deg);   }
+					}
+							
+		#vivi2 {width: 100px; height: 80px;position: absolute; top: 1000px; left:200px;
+				animation: blooom 2s ease 1 forwards; animation-delay: 0.2s; animation-play-state: paused; opacity: 0;}
+
+		@keyframes blooom{from{width:100px; height:80px; top:1000px; left:200px; transform: rotate3d(1,0.5,0,-180deg);}
+					to{width:400px; height: 400px; top: 850px; left:160px; transform: rotate3d(0.5,1,0,-360deg); perspective: 200px;  }
+					}		
+
+		#vivi3 {width: 100px; height: 80px;position: absolute; top: 1000px; left:200px;
+				animation: bloooom 2s ease 1 forwards; animation-delay: 0.3s; animation-play-state: paused; opacity: 0;}
+
+		@keyframes bloooom{from{width:100px; height:80px; top:1000px; left:200px; transform: rotate3d(1,0.5,0,-180deg);}
+					to{width:400px; height: 400px; top: 940px; left:110px; transform: rotate3d(0.5,1,0,-360deg); perspective: 200px;  }
+					}		
+				
+		#vivi4 {width: 100px; height: 80px;position: absolute; top: 1000px; left:200px;
+				animation: blooam 2s ease 1 forwards; animation-delay: 0.4s; animation-play-state: paused; opacity: 0;}
+
+		@keyframes blooam{from{width:100px; height:80px; top:1000px; left:200px; transform: rotate3d(1,0.2,0,-90deg);}
+					to{width:400px; height: 400px; top: 930px; left:-40px; transform: rotate3d(0.5,1,0,-360deg); perspective: 200px;  }
+					}			
+				
+		#vivi5 {width: 100px; height: 80px;position: absolute; top: 1000px; left:200px;
+				animation: bloobm 2s ease 1 forwards; animation-delay: 0.5s; animation-play-state: paused; opacity: 0;}
+
+		@keyframes bloobm{from{width:100px; height:80px; top:1000px; left:200px; transform: rotate3d(1,0.5,0,-180deg);}
+					to{width:400px; height: 400px; top: 770px; left:-50px; transform: rotate3d(0.5,1,0,-360deg); perspective: 200px;  }
+					}		
+		#layer_1
+		 {position: absolute; width:400px; height: 400px; top: 65px; left: 800px;}
+
+		  svg .draw
+		 {
+		 	stroke: #000;
+		 	stroke-width:1px;
+		 	fill: transparent;
+		 	stroke-dasharray: 1300;
+		 	stroke-dashoffset: 1300;
+		 	animation: artist 9s linear infinite; 
+		 }
+
+		 @keyframes artist
+		 {
+		 	to{
+		 		stroke-dashoffset:0;
+		 	}
+		 }
+
+	.object1{
+		height: 70px;
+		width: 70px;
+		position: absolute;
+		top:5%;
+		left:10%;
+		background: red;
+		border-radius: 50%;
+	}	
+
+	.object2{
+		height: 200px;
+		width: 200px;
+		position: absolute;
+		top:105%;
+		left:66%;
+		background: deeppink;
+		border-radius: 50%;
+	}
+
+	.object3{
+		height: 500px;
+		width: 500px;
+		position: absolute;
+		top:136%;
+		left:28%;
+		background: yellow;
+		border-radius: 50%;
+	}
+
+	.object4{
+		height: 350px;
+		width: 350px;
+		position: absolute;
+		top: 30%;
+		left: 28%;
+		background: blueviolet;
+		border-radius: 50%;
+	}
+
+	.object5{
+		height: 150px;
+		width: 150px;
+		position: absolute;
+		top: 100%;
+		left: 85%;
+		background: forestgreen;
+		border-radius: 50%;
+	}
+
+	.thing1{
+		position:absolute;
+		top: 0%;
+		left: 0%;
+	}
+	.thing2{
+		position:absolute;
+		top: 50%;
+		left: 47%;
+	}
+	.thing3{
+		position:absolute;
+		top: 120%;
+		left: 10%;
+	}
+	.thing4{
+		position:absolute;
+		top: 140%;
+		left: 2	0%;
+	}
+	.thing5{
+		position:absolute;
+		top: 230%;
+		left: 40%;
+	}
+	.thing6{
+		position:absolute;
+		top: 350%;
+		left: 10%;
+	}
+	.thing7{
+		position:absolute;
+		top: 420%;
+		left: 15%;
+	}
+	.thing8{
+		position:absolute;
+		top: 540%;
+		left: 30%;
+	}
+
+	#but{position: absolute;
+		 top:400px;
+		 left:300px;
+		 height: 200px;
+		 width: 200px;}
+	</style>
+</head>
+<body>
+
+	<div id="monitor"></div>
+	<div class="object1"></div>
+	<div class="object2"></div>
+	<div class="object3"></div>
+	<div class="object4"></div>
+	<div class="object5"></div>
+	<img src="bird.png" id="jin">
+	<img src="bird2.gif" id="jin2">
+	<img src="mic.png" id="jin3">
+	<img src="jinflower.png" id="jin4">
+	<img src="but.png" id="but">
+	<img src="sunflower.png" id="sun">
+	<audio id="birdsound">
+		<source src="birdsound1.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="birdsound2">
+		<source src="jinsound.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="sunsound">
+		<source src="sunsound.mp3" type="audio/mpeg">
+	</audio>
+
+	<img src="vivi2.png" id="vivi1">
+	<img src="vivi3.png" id="vivi2">
+	<img src="vivi4.png" id="vivi3">
+	<img src="vivi5.png" id="vivi4">
+	<img src="vivi6.png" id="vivi5">
+	<img src="vivi1.png" id="vivi">
+	<img src="sunny.png" id="sunny">
+	<img src="fairy.jpg" id="fairy">
+	<img src="sunflower2.png" id="sun2">
+
+	<div class="container">
+	<div class="thing1 rellax" data-rellax-speed="2">진/달/래<br><br>옛날 촉나라의 망제는 이름을 두우라 하였다.<br>
+	위나라에 망한 후 그는 도망하여 복위를 꿈꾸었으나 <br>
+	뜻을 이루지 못하고 죽어 새가 되버렸다...<br><br></div>
+
+	<div class="thing2 rellax" data-rellax-speed="5">이 새는 두견새라 하여 망제의 넋이 붙었다고 한다.<br>
+	두견새는 봄만 되면 슬피우는데 <br><br></div>
+
+	<div class="thing3 rellax" data-rellax-speed="10">특히 피빛같이 붉은 진달래만 보면 더욱 우짖으므로<br>
+	망제가 피를 원망하는 것이라 하여 <br>
+	진달래에 두견화라고 이름을 붙였다 하며<br></div>
+
+	<div class="thing4 rellax" data-rellax-speed="5">두견새의 한번 우짖는 소리에<br>
+	한송이 씩 피어난다고 하는 이야기도 있다.<br></div>
+
+	<div class="thing5 rellax" data-rellax-speed="10">해;바;라;기;<br><br>오직 그대만을, 일편단심(一片丹心)<br>
+	해를 따라 도는 것으로 오인한 데서 붙여진 이름이다.<br>
+	이를 우리말로 번역하다보니<br>
+	해바라기라고 알려지게 된 것<br> </div>
+
+	<div class="thing6 rellax" data-rellax-speed="11">해를 향해 피는 꽃임에는 변함없기에<br>
+	이는 일편단심(一片丹心)의 표현을<br>
+	해바라기로 대신해 쓰기도 한다.<br>
+	이와 연관된 여러 가지 역사가 숨어 있는데,<br></div>
+
+	<div class="thing7 rellax" data-rellax-speed="9">그리스 신화에서는 태양의 신 아폴로에게<br>
+	한눈에 반한 물의 요정이,<br></div>
+
+	<div class="thing8 rellax" data-rellax-speed="14">한 자리에 선채 아흐레 낮밤 동안<br>
+	아폴로를 기다리다, 끝내 대지에 몸이 박혀<br> 
+	해바라기가 되었다는 이야기가 있다.<br><br></div>
+
+	<svg id="layer_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236.08 81.99"><defs><style>.cls-1{fill:#231815;}</style></defs><title>무제-1</title><path class="draw" d="M172.83,166c-.06,9-1,19.84,5.32,27.14s18.22,4.59,26.82,4.69c2.11,0,4.58.8,5.72-1.32,1-1.79.65-5,1-7,.35-2.22.62-4.43.8-6.68.13-1.51-.24-6.37.43-2.35.53,3.17.89,6.37,1.68,9.48a41,41,0,0,0,4.74,11.78c.19.28.7.36.86,0a16.13,16.13,0,0,0,.82-2c2.63-2.92,1.19-.84,2-.08,1.24,1.16,1,3.34,2,4.68.19.27.69.37.86,0a57.81,57.81,0,0,0,5-19.16c.44-4.15.59-8.33,1-12.48.32-2.89.77-5.77,1.21-8.65.6-3.9.17.38.21,1.51.24,8.09,1.65,16.1,3.07,24,1.61,8.95,2.78,18,5.84,26.61a.5.5,0,0,0,.83.22c1.29-1.47.69-4.79.78-6.56.14-2.68.38-5.39.66-8.06.05-.44.16-4,.54-4.24,1.3-.66,1.74,1.8,2,2.4a.53.53,0,0,0,.48.36c1.22,0,1.25-.8,2.07-1.56,3.59-3.35,8-2.29,12.67-2.29h24.23c5.24,0,7.45,1.22,9.06-4,1.51-4.93,2.69-8.73,7.79-10.73a18.29,18.29,0,0,1,6.46-1.31c1.08,0,2.6.41,3.61.09,3.44-1.1,1.89-6.37,1.89-9.24,0-7.91.6-16.1-.18-24-.13-1.29-.35-2.6-.49-3.9-.06-.51.15-5.95-.33-6.43-1.77-1.74-.45,2.78-.4,3.05.28,1.46.61,2.95.91,4.41.22,1.06,1.66,4.89.81,5.44a17.2,17.2,0,0,1-2.81-.07c-2.32,0-4.64,0-7,0a.5.5,0,0,0,0,1c6.75,0,13.53.23,20.26-.33.63-.05.65-1,0-1-2.13,0-4.2.39-6.32.37a18,18,0,0,0-3.17-.18c-1.06.22-1.29,0-2,1.08-1.22,1.82-.26,5.66-.39,7.66-.21,3.15-.53,6.28-.6,9.44s-1.38,11.24,2.73,12.31c2.63.67,5.73.1,8.46.82,4.44,1.17,8.3,3.53,10.53,7.69,2.41,4.51-1,8.63,4.8,9.18,8.33.79,17.19,0,25.56,0,7.57,0,15.11.18,22.66.34,6.29.13,13.76,1.49,19.93.2a.51.51,0,0,0,.3-.73c-1.25-2.9-6.36-5.24-9.11-6.42-4.33-1.87-9-4.14-13.47-5.56a.5.5,0,0,0-.61.35c-.69,4.12.7,8.93,1.21,13,.57,4.52.49,9.07,1.08,13.55,0,.29.3.61.64.48,4-1.49,7.41-5,10.92-7.4,3.7-2.5,7.49-4,9.63-8.06.29-.57-.57-1.08-.87-.51-2,3.76-6.46,5.84-9.91,8.16-2.23,1.5-5.72,5.33-8.36,5.65s-.45.78-1.13-.72c.23.5-.14-1.07-.17-1.46-.13-2,0-4.1-.16-6.12-.24-3.27-.82-6.62-1.29-9.86-.34-2.31-2-5.33,1.63-4.78,1.67.25,3.6,1.69,5.16,2.29,3.28,1.26,6.44,2.26,9.4,4.19.95.62,4.47,2.15,2.36,3.15-.87.41-3.27-.07-4.28-.07-4,0-8-.36-12-.34-8.12,0-16.35-.33-24.52-.34H351c-3.59,0-12.1,1.53-13.63-2.32-.87-2.16.08-4-1.32-6.31a18.1,18.1,0,0,0-5.55-6,23.2,23.2,0,0,0-6.92-2.66c-3.36-.74-7.26.57-8.81-3-.92-2.12-.34-6.26-.3-8.66s.15-4.89.35-7.3c.16-2,.16-3.93.31-5.88a12.23,12.23,0,0,1,0-1.71c.51-2,1.28-1.92,2.76-2.18,1.71-.3,3.62.5,5.33-.15,3-1.16-2.32-.82-3.32-.82h-14.2a.5.5,0,0,0,0,1c3.14,0,7.4-.76,10.32.58a.51.51,0,0,0,.75-.43c.64-5.15-2.36-10.71-2.61-15.88a.5.5,0,0,0-1,0c0,5.87,1.11,11.63,1,17.44-.08,6.59,0,13.17,0,19.76a18.69,18.69,0,0,1,0,3.81c-.51,2.35-1.5,2.9-3.75,3.35s-4,.14-6.15.86c-3.52,1.16-7,2.64-8.43,6.24-.77,1.91-.66,4.3-1.55,6.14-1.76,3.61-5.41,2.8-8.89,2.8H266.1c-3.64,0-7.28.05-10.92,0-1.92,0-3.54-.4-5.12.79-.61.46-1.54,2.86-2.54,2.57a17.55,17.55,0,0,0-2-4.15.51.51,0,0,0-.79.1c-2.29,3.71-1.75,10.67-2,14.88-.05,1,.44,4.84-.28,5.5.74-.68-2.37-9.75-2.56-10.79-1.32-7.38-2.68-14.76-3.89-22.16-.67-4.12-1.25-8.25-1.57-12.41-.22-2.88.48-6.76-.62-9.38a.5.5,0,0,0-1,0c-3.07,9.83-2.3,20.71-3.91,30.82-.2,1.3-2.47,12.1-3.7,11.38,0,0-.85-2.35-.95-2.59-.61-1.5-.77-2.37-1.87-3.38a.52.52,0,0,0-.71,0c-.95.84-1,1.95-1.7,2.82s-.42.86-1.2-.81-1.41-3.19-2-4.83c-2-5.58-2.14-11.44-3.68-17.1a.5.5,0,0,0-.91-.12c-.69,1.24-.55,2.45-.61,3.83a102.64,102.64,0,0,1-1.22,10.34c-.47,3.13-1.1,6.09-4.75,6s-7.13,0-10.7,0c-7.86,0-14.88-.4-18.75-8.44-3.17-6.6-2.42-15.35-2.37-22.39a.5.5,0,0,0-1,0Z" transform="translate(-172.75 -134.61)"/></svg>
+
+	<script scr="js/jqery-3.2.1.js"></script>
+	<script src="rellax.js"></script>
+	<script type="text/javascript">
+		var rellax = new Rellax('.rellax');</script>
+	<script type="text/javascript">
+		window.onscroll = function(){
+		var t = document.documentElement.scrollTop;
+		monitor.innerHTML = t + "px";
+		if(t < 100){
+			document.body.style.background = "powderblue";
+		
+		}else if(t < 500){
+			document.body.style.background = "yellow";
+		}else if(t < 800){
+			document.body.style.background = "yellowgreen";
+		}else if(t < 1000){
+			document.body.style.background = "skyblue";
+		}else if(t < 1200){
+			document.body.style.background = "orange";
+		}else{
+			document.body.style.background = "red";
+		}	
+		if(t > 400 && t < 730){ 
+			jin.style.animationPlayState = "running";
+			jin.style.animationPlayState = "running";
+			birdsound2.currenTime = 0;
+			birdsound2.play();
+		}else{
+			jin.style.animationPlayState = "paused";
+			birdsound2.pause();
+		}
+		if(t > 500 && t < 800){ 
+			vivi.style.opacity = "1";
+			vivi1.style.animationPlayState = "running";
+			vivi2.style.animationPlayState = "running";
+			vivi3.style.animationPlayState = "running";
+			vivi4.style.animationPlayState = "running";
+			vivi5.style.animationPlayState = "running";
+			vivi1.style.opacity = "1";
+			vivi2.style.opacity = "1";
+			vivi3.style.opacity = "1";
+			vivi4.style.opacity = "1";
+			vivi5.style.opacity = "1";
+			vivid.style.animationPlayState = "running";
+			
+		}
+
+		if(t > 900 && t < 1200){ 
+			sunsound.currenTime = 0;
+			sunsound.play();
+		}
+	
+		if(t > 1506 && t < 2000){ 
+			sun2.style.opacity = "1";
+		}else{
+		}
+
+	}	
+
+
+		var toggle = "off";
+
+		but.onclick = function(){
+			if(toggle == "off"){
+				toggle = "on";
+				but.setAttribute("src","stopbut.png");
+				birdsound.currentTime = 0;
+				birdsound.play();
+			}
+			else{but.setAttribute("src","but.png");
+				toggle = "off";
+				birdsound.pause();}	
+			}
+
+			
+	
+
+	</script>
+</body>
+</html>

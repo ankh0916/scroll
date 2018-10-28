@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>스크롤이벤트</title>
+	<link href="https://fonts.googleapis.com/css?family=Yeon+Sung" rel="stylesheet">
+	<style>body{margin:0;}
+		#container{ font-size: 65px; font-family: 'Yeon Sung', cursive; transition: all 1s;}
+		#monitor{width:100px; height:40px; background: green; position: fixed; color: white; text-align: center; line-height: 40px;
+			right:0;}
+		#jin{position: absolute; top:630px; left:1000px; width:300px;}
+		#jin2{position: absolute; top:150px; left:1250px; width:250px;}	
+		#jin3{position: absolute; top:500px; left:1150px; width:500px; transform: rotateY(180deg);}	
+		#jin4{position: absolute; top:980px; left:1150px; width:100px;}
+		#bloom{position: absolute; top:2400px; left:700px; width:300px;z-index:9999;animation:rotate 1s linear infinite paused;}
+		@keyframes rotate{
+			from{transform: rotate(0deg)}
+			to{transform: rotate(360deg)}
+		}
+	</style>
+</head>
+<body>
+<div id="monitor"></div>
+<img src="bird.png" id="jin">
+<img src="bird2.gif" id="jin2">
+<img src="mic.png" id="jin3">
+<img src="jinflower.png" id="jin4">
+<img src="bloom.png" id="bloom">
+
+<div id="container">
+<br>
+	진달래꽃
+<br><br><br>
+	옛날 촉나라의 망제는 이름을 두우라 하였다.<br><br>
+	위나라에 망한 후 그는 도망하여 복위를 꿈꾸었으나 <br>
+	뜻을 이루지 못하고 죽어 새가 되었는데...<br><br>
+	이 새는 두견새라 하여 망제의 넋이 붙었다고 한다.<br>
+	두견새는 봄만 되면 슬피우는데 <br><br>
+	특히 피빛같이 붉은 진달래만 보면 더욱 우짖으므로<br>
+	망제가 피를 원망하는 것이라 하여 <br>
+	진달래에 두견화라고 이름을 붙였다 하며<br>
+	두견새의 한번 우짖는 소리에<br>
+	한송이 씩 피어난다고 하는 이야기도 있다.<br>
+	
+<br>
+	해바라기
+<br><br>
+	오직 그대만을, 일편단심(一片丹心)<br>
+	해를 따라 도는 것으로 오인한 데서 붙여진 이름이다.<br>
+	이를 우리말로 번역하다보니<br>
+	해바라기라고 알려지게 된 것인데,<br> 
+	해를 향해 피는 꽃임에는 변함없기에<br>
+	우리는 일편단심(一片丹心)의 표현을<br>
+	해바라기로 대신해 쓰기도 한다.<br><br>
+	이와 연관된 여러 가지 역사가 숨어 있는데,<br>
+	그리스 신화에서는 태양의 신 아폴로에게<br>
+	한눈에 반한 물의 요정이,<br>
+	한 자리에 선채 아흐레 낮밤 동안<br>
+	아폴로를 기다리다, 끝내 대지에 몸이 박혀<br> 
+	해바라기가 되었다는 이야기가 있다.<br>
+<br>
+	정현종<br>
+<br>
+	나는 가끔 후회한다 <br>
+	그때 그일이 <br>
+	노다지였을지도 모르는데… <br><br>
+	그때 그 사람이 <br>
+	그때 그 물건이 <br>
+	노다지였을지도 모르는데… <br><br>
+	더 열심히 파고들고 <br>
+	더 열심히 말을 걸고<br> 
+	더 열심히 귀 기울이고<br> 
+	더 열심히 사랑할 걸… <br>
+<br>
+	반벙어리처럼 <br>
+	귀머거리처럼 <br>
+	보내지는 않았는가<br> 
+	우두커니처럼… <br>
+	더 열심히 그 순간을 <br>
+	사랑할 것을… <br>
+
+	모든 순간이 다아 <br>
+	꽃봉오리인 것을, <br>
+	내 열심에 따라 피어날<br> 
+	꽃봉오리인 것을!<br><br>
+	모든 순간이 꽃봉오리인 것을<br>
+<br>
+	정현종<br>
+
+</div>
+
+<script type="text/javascript">
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop;
+		monitor.innerHTML = t + "px";
+		if(t < 500){
+			container.style.background = "red";
+		}else if(t < 1500){
+			container.style.background = "orange";
+		}else if(t < 2500){
+			container.style.background = "yellow";
+		}else if(t < 3500){
+			container.style.background = "green";
+		}else if(t < 4500){
+			container.style.background = "blue";
+		}else if(t < 5500){
+			container.style.background = "navy";
+		}else{
+			container.style.background = "purple";
+		}
+
+		if(t > 2240 && t < 2800){ 
+			bloom.style.animationPlayState = "running";
+		}else{
+			bloom.style.animationPlayState = "paused";
+		}
+	}
+
+	//자동스크롤
+	var s = 0;
+	//setInterval(count,100);
+	function count(){
+		s = s + 1;
+		//s합이 30이넘어야 3초가 지난것
+		if(s > 30){
+			var t = document.documentElement.scrollTop;
+			t = t + 10;
+			document.documentElement.scrollTop = t;	
+		}
+		
+	}
+
+	document.body.onmousemove = function(){
+		s = 0;
+	}
+
+	//스크롤 예제
+	//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_svg_scrolldrawing
+</script>
+</body>
+</html>
+
+
+
+
